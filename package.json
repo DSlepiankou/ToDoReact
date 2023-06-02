@@ -1,6 +1,6 @@
 {
   "name": "todo",
-  "homepage": "https://github.todoreact.io/",
+  "homepage": "https://github.todoreact.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
