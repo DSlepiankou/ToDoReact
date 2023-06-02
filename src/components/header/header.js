@@ -1,9 +1,9 @@
 import React from "react";
 import './header.css';
 
-function Header(){
-    return(
-            <h1 className="header-text">ToDo List</h1>
+function Header() {
+    return (
+        <h1 className="header-text">ToDo List</h1>
     )
 };
 

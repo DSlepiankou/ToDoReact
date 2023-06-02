@@ -1,5 +1,6 @@
 .header-text{
     align-items: flex-end;
+    margin-left: auto;
     margin: 10px;
    color: rgb(174, 248, 0);
 }

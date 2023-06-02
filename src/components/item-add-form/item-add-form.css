@@ -1,10 +1,18 @@
 .item-add-form {
     margin-top: 10px;
-    margin-left: 10%;
+    margin-left: auto;
     margin-right: auto;
 }
 
-.item-add-form input{
+.form-control{
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
     margin-right: 3px;
-    max-width: 355px;
+    max-width: auto;
+    box-sizing: border-box;
+    margin: 8px 0;
+    font-family: "Trebuchet MS";
+    font-size: large;
 }
