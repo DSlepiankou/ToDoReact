@@ -1,0 +1,15 @@
+.app {
+    display: flex;
+    align-items: center;
+    height: 290px;
+    background-image: url('../../img/header.jpg');
+}
+
+.to-do-list{
+    width: 30%;
+    padding-left: 0;
+    position: absolute;
+    top: 7%;
+    right: 35%;
+    left: 35%;
+}

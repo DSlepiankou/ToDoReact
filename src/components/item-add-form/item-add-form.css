@@ -1,0 +1,10 @@
+.item-add-form {
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+.item-add-form input{
+    margin-right: 3px;
+    max-width: 355px;
+}
