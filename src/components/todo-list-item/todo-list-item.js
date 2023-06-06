@@ -1,17 +1,22 @@
 import React from "react";
 import "./todo-list-item.css"
 
-function TodoListItem(props){
-    return (
-        <span>
-            <span
-                className="todo-list-item">
-                {props.label}
-            </span>
+function TodoListItem(props) {
 
+    const {
+        onDeleted
+    } = props;
+
+    return (
+        <span className="todo-list-item">
+            <div className="todo-text">
+                <input type="checkbox" className="checkbox-circle" />
+                {props.label}
+            </div>
             <button type="button"
-                className="btn btn-outline-danger btn-sm float-right">
-                <i className="fa fa-trash-o" />
+                className="float-right delete-btn"
+                onClick={onDeleted}>
+                <i className="bi bi-trash"></i>
             </button>
         </span>
     );

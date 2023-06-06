@@ -15,9 +15,15 @@ function App() {
             done:false,
             id:uuidv4()
         }
-        
+
         const newEls = [...items, newItem];
         setItems(newEls);
+    }
+
+    function deleteItem(id){
+        const els = items.filter((el) => el.id !== id);
+
+        setItems(els);
     }
 
     return (
@@ -26,7 +32,8 @@ function App() {
                 <Header />
                 <ItemAddForm 
                 onItemAdded={(text) => addItem(text)}/>
-                <ItemsList todos={items}/>
+                <ItemsList todos={items}
+                onDeleted={(id) => deleteItem(id)}/>
             </div>
         </div>
     )

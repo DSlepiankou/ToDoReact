@@ -12,8 +12,8 @@ function ItemAddForm(props) {
     function onSubmit(e){
         e.preventDefault();
         props.onItemAdded(input)
+        setInput("");
     }
-
 
     return (
         <form className="item-add-form"
@@ -22,8 +22,8 @@ function ItemAddForm(props) {
                 className="form-control"
                 placeholder="Type here what you want todo"
                 onChange={onInputChange}
-                value={input}
-                ></input>
+                value={input}>
+            </input>
         </form>
     )
 }
