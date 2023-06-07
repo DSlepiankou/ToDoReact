@@ -10,6 +10,7 @@ import ToDoFilter from "../todo-filter/todo-filter";
 function App() {
 
     const [items, setItems] = useState([])
+    const [filterState, setFilter] = useState('all')
 
     function addItem(text) {
         const newItem = {
@@ -28,21 +29,53 @@ function App() {
         setItems(els);
     }
 
+    function filtering(items, filter) {
+        switch (filter) {
+            case 'active':
+                return items.filter((item) => !item.isDone)
+            case 'done':
+                return items.filter((item) => item.isDone)
+            default:
+                return items;
+        }
+    }
+
+    function markItemAsDone(id) {
+        const idx = items.findIndex((el) => el.id === id);
+        const oldItem =items[idx];
+        const newItem = {...oldItem, isDone: !oldItem.isDone}
+        const newItems = [...items.slice(0,idx),
+        newItem,
+        ...items.slice(idx+1)];
+        
+        setItems(newItems);
+    }
+
+    const visibleItems = filtering(items, filterState);
+
+
+    const activeItems = items.filter((x) => x.isDone === false);
+    const activeItemsCount = activeItems.length;
+
     return (
         <div className="app">
             <div className="to-do-list">
                 <Header />
                 <ItemAddForm
                     onItemAdded={(text) => addItem(text)} />
-                <ItemsList todos={items}
+                <ItemsList
                     onDeleted={(id) => deleteItem(id)}
-                     />
+                    onToggleDone={(id) => markItemAsDone(id)}
+                    todos={visibleItems}
+                />
                 <span className="item-status-panel">
                     <div>
-                        <ToDoCounter items={items} />
+                        <ToDoCounter items={activeItemsCount} />
                     </div>
                     <div>
-                        <ToDoFilter/>
+                        <ToDoFilter
+                            filterState={filterState}
+                            onFilterChange={(stateName) => setFilter(stateName)} />
                     </div>
                 </span>
             </div>

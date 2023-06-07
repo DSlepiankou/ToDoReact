@@ -15,7 +15,7 @@ function ToDoFilter(props){
           <button type="button"
             className={`btn ${buttonsClass}`}
             key={name}
-            //onClick={() => props.onFilterChange(name)}
+            onClick={() => props.onFilterChange(name)}
             >{label}</button>
         );
       });

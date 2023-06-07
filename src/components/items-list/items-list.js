@@ -10,8 +10,9 @@ function ItemsList(props){
             <li key={item.id} className="list-group-item">
                 <TodoListItem
                     {...itemProps}
+                    checked = {item.isDone}
                     onDeleted={() => props.onDeleted(item.id)}
-                    onToggleDone={() => props.onToggleDone(id)}
+                    onToggleDone={() => props.onToggleDone(item.id)}
                 />
             </li>
         );

@@ -1,11 +1,10 @@
 import React from "react";
 
-function ToDoCounter(props){
-
-    const items = props.items.length;
-    return(
+function ToDoCounter(props) {
+    console.log(props.items)
+    return (
         <div className="counter">
-            <h2>{items} more to do</h2>
+            {props.items} more to do
         </div>
     )
 }
