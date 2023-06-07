@@ -13,3 +13,7 @@
     right: 35%;
     left: 35%;
 }
+
+.item-status-panel{
+    display: flex;
+}
