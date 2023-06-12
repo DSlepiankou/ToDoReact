@@ -1,33 +1,33 @@
 .todo-list-item {
-    width: 100%;
-    margin: 0px;
-    line-height: 45px;
-    border-bottom-style: groove;
-    border-width: 1px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    float: left;
-    background-color: rgb(253, 253, 253);
-  }
+  width: 100%;
+  margin: 0px;
+  line-height: 45px;
+  border-bottom-style: groove;
+  border-width: 1px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  float: left;
+  background-color: rgb(253, 253, 253);
+}
 
-  .checkbox-circle{
-    margin-left: 10px;
-    margin-right: 10px;
-    vertical-align: middle;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
+.checkbox-circle {
+  margin-left: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  max-width: 100%;
+}
 
-  }
-
-  .todo-list-item .delete-btn {
-    border-style: hidden;
-    border: 0px;
-    background-color: inherit;
-    vertical-align: middle;
-    text-align: right;
-    float: right;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
+.todo-list-item .delete-btn {
+  border-style: hidden;
+  border: 0px;
+  background-color: inherit;
+  vertical-align: middle;
+  text-align: right;
+  float: right;
+  margin-left: 10px;
+  margin-right: 10px;
+}

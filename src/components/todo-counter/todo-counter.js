@@ -1,7 +1,7 @@
 import React from "react";
+import "./todo-counter.css"
 
 function ToDoCounter(props) {
-    console.log(props.items)
     return (
         <div className="counter">
             {props.items} more to do

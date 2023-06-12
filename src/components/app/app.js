@@ -42,13 +42,18 @@ function App() {
 
     function markItemAsDone(id) {
         const idx = items.findIndex((el) => el.id === id);
-        const oldItem =items[idx];
-        const newItem = {...oldItem, isDone: !oldItem.isDone}
-        const newItems = [...items.slice(0,idx),
-        newItem,
-        ...items.slice(idx+1)];
-        
+        const oldItem = items[idx];
+        const newItem = { ...oldItem, isDone: !oldItem.isDone }
+        const newItems = [...items.slice(0, idx),
+            newItem,
+        ...items.slice(idx + 1)];
+
         setItems(newItems);
+    }
+
+    function deleteCompleted() {
+        const newArr = items.filter((x)=>!x.isDone)
+        setItems(newArr)
     }
 
     const visibleItems = filtering(items, filterState);
@@ -69,14 +74,12 @@ function App() {
                     todos={visibleItems}
                 />
                 <span className="item-status-panel">
-                    <div>
-                        <ToDoCounter items={activeItemsCount} />
-                    </div>
-                    <div>
-                        <ToDoFilter
-                            filterState={filterState}
-                            onFilterChange={(stateName) => setFilter(stateName)} />
-                    </div>
+                    <ToDoCounter items={activeItemsCount} />
+                    <ToDoFilter
+                        filterState={filterState}
+                        onFilterChange={(stateName) => setFilter(stateName)} />
+                        <button className="del-button"
+                        onClick={()=> deleteCompleted()}>Delete completed</button>
                 </span>
             </div>
         </div>

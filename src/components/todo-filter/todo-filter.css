@@ -1,0 +1,21 @@
+.btn-group-filter {
+    font-size: 14px;
+    margin-top: 1px;
+    margin-left:20px;
+    justify-content: center;
+    display: flex;
+}
+
+.butn {
+    border:none;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.butn:hover{
+    color: rgb(253, 1, 1);   
+}
+
+.butn.active{
+    color:rgb(231, 129, 12)
+}

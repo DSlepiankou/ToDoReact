@@ -1,4 +1,5 @@
 import React from "react";     
+import './todo-filter.css';
 
 function ToDoFilter(props){
     
@@ -9,11 +10,11 @@ function ToDoFilter(props){
       ]
 
       const buttonsForRender = buttons.map(({ name, label }) => {
-        const isActive = props.filter === name;
-        const buttonsClass = isActive ? 'btn-info' : 'btn-outline-secondary'
+        const isActive = props.filterState === name;
+        let buttonsClass = isActive ? 'active' : 'outline'
         return (
           <button type="button"
-            className={`btn ${buttonsClass}`}
+            className={`butn ${buttonsClass}`}
             key={name}
             onClick={() => props.onFilterChange(name)}
             >{label}</button>
@@ -21,7 +22,7 @@ function ToDoFilter(props){
       });
 
     return(
-        <div className="btn-group filter">
+        <div className="btn-group-filter">
             {buttonsForRender}
         </div>
     );
