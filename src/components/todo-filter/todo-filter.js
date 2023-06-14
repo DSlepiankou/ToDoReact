@@ -24,6 +24,8 @@ function ToDoFilter(props){
     return(
         <div className="btn-group-filter">
             {buttonsForRender}
+            <button className="del-button"
+                        >Delete completed</button>
         </div>
     );
 }

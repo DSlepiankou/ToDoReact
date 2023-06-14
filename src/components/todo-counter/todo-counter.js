@@ -1,10 +1,17 @@
 import React from "react";
 import "./todo-counter.css"
+import { useSelector } from "react-redux";
 
-function ToDoCounter(props) {
+
+function ToDoCounter() {
+
+    const state = useSelector((state) => state.toDoList)
+    
+    const count = state.elements.filter((el) => !el.completed).length;
+
     return (
         <div className="counter">
-            {props.items} more to do
+            {count} more to do
         </div>
     )
 }

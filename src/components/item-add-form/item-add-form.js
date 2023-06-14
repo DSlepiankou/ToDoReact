@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import './item-add-form.css';
+import { useDispatch } from "react-redux";
+import { addElement } from "../../redux/todo-actions";
 
-function ItemAddForm(props) {
+function ItemAddForm() {
 
+    const dispatch = useDispatch();
     const [input, setInput] = useState("");
 
     function onInputChange(e){
@@ -11,9 +14,13 @@ function ItemAddForm(props) {
 
     function onSubmit(e){
         e.preventDefault();
-        props.onItemAdded(input)
+        addItem(input)
         setInput("");
     }
+
+    function addItem(input){
+        dispatch(addElement(input));
+    };
 
     return (
         <form className="item-add-form"
