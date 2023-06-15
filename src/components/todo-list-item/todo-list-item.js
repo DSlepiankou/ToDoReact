@@ -5,7 +5,7 @@ function TodoListItem(props) {
     return (
         <span className="todo-list-item">
             <div>
-                <input type="checkbox" className="checkbox-circle"  onChange={props.onToggleDone} defaultChecked={props.checked}/>
+                <input type="checkbox" className="checkbox-circle"  onChange={props.onToggleDone} checked={props.checked}/>
                 {props.content}
             </div>
             <button type="button"

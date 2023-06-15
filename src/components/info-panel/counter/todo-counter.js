@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 function ToDoCounter() {
 
-    const state = useSelector((state) => state.toDoList)
+    const state = useSelector((state) => state.toDoList);
     
     const count = state.elements.filter((el) => !el.completed).length;
 

@@ -5,17 +5,17 @@ import { useSelector, useDispatch } from "react-redux";
 import { deleteElement, checkCompleted } from "../../redux/todo-actions";
 
 
-function ItemsList(props){
+function ItemsList(){
 
-    const state = useSelector((state) => state.toDoList);
-    const filter = useSelector((state) => state.toDoList.filter);
+    const state = useSelector((state) => state.toDoList.elements);
+    const filter = useSelector((state) => state.toDoList.filtering);
     const dispatch = useDispatch();
 
     function filterElements(state, filter){
         switch(filter){
             case "active":
                 return state.filter((el) => !el.completed)
-            case "completed":
+            case "done":
                 return state.filter((el) => el.completed)
             default:
                 return state;
@@ -32,13 +32,13 @@ function ItemsList(props){
 
     const filteredElements = filterElements(state, filter);
 
-    const items = filteredElements.elements.map((el) => {
+    const items = filteredElements.map((el) => {
         const {id, ...elProps} = el;
         return (
             <li key={el.id} className="list-group-item">
                 <TodoListItem
                     {...elProps}
-                    checked = {el.isDone}
+                    checked = {el.completed}
                     onDeleted={() => deleteItem(el.id)}
                     onToggleDone={() => checkCompletedItem(el.id)}
                 />
