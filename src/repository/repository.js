@@ -1,16 +1,17 @@
+    export function saveFilter (filtering) {
+        localStorage.setItem("filtering", JSON.stringify(filtering));
+    };
 
-    // export const saveElements = (elements) => {
-    //     localStorage.setItem("todoItemsList", JSON.stringify(elements));
-    // };
+    export function getElements (){
+        return JSON.parse(localStorage.getItem("toDoList")) ?? [];
+    };
 
-    // export const saveFilter = (filter) => {
-    //     localStorage.setItem("filter", JSON.stringify(filter));
-    // };
+    export function getFilter() {
+        return JSON.parse(localStorage.getItem("filtering")) ?? "all";
+    };
 
-    // export const getElements = () => {
-    //     return JSON.parse(localStorage.getItem("todoItemsList")) ?? [];
-    // };
+    export function saveElements(elements){
+        localStorage.setItem("toDoList", JSON.stringify(elements));
+    }
 
-    // export const getFilter = () => {
-    //     return JSON.parse(localStorage.getItem("filter")) ?? "all";
-    // };
+    
