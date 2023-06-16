@@ -2,7 +2,7 @@ import React from "react";
 import ToDoCounter from "./counter/todo-counter";
 import ToDoFilter from "./filtering/todo-filter";
 import DelButton from "./delete-completed/delete-completed"
-import './info-panel.css'
+import './info-panel.scss'
 
 function InfoPanel() {
 

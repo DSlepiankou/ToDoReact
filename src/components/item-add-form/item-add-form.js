@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './item-add-form.css';
+import './item-add-form.scss';
 import { useDispatch } from "react-redux";
 import { addElement } from "../../redux/todo-actions";
 

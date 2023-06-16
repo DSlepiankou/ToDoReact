@@ -1,6 +1,6 @@
 import React from "react";
 import TodoListItem from "../todo-list-item/todo-list-item";
-import "./items-list.css"
+import "./items-list.scss"
 import { useSelector, useDispatch } from "react-redux";
 import { deleteElement, checkCompleted } from "../../redux/todo-actions";
 

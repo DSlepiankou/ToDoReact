@@ -1,5 +1,5 @@
 import React from "react";
-import './todo-filter.css';
+import './todo-filter.scss';
 import { changeFilter } from "../../../redux/todo-actions";
 import { useSelector, useDispatch } from "react-redux";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./todo-counter.css"
+import "./todo-counter.scss"
 import { useSelector } from "react-redux";
 
 
