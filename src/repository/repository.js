@@ -13,5 +13,3 @@
     export function saveElements(elements){
         localStorage.setItem("toDoList", JSON.stringify(elements));
     }
-
-    
