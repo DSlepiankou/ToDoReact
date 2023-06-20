@@ -2,7 +2,6 @@ import configureStore from 'redux-mock-store';
 import { Provider } from "react-redux";
 import { render, screen } from '@testing-library/react';
 import ToDoFilter from './todo-filter';
-import '@testing-library/jest-dom';
 
 
 const mockStore = configureStore([]);

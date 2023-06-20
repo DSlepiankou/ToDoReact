@@ -2,7 +2,6 @@ import DelButton from "./delete-completed";
 import  configureStore  from 'redux-mock-store';
 import { Provider } from "react-redux";
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
 
 const mockStore = configureStore([]);
 

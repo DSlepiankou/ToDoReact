@@ -1,7 +1,6 @@
 import  configureStore  from 'redux-mock-store';
 import { Provider } from "react-redux";
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import ItemsList from './items-list';
 
 const mockStore = configureStore([]);
