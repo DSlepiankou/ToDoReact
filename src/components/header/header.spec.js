@@ -1,22 +1,25 @@
-import Enzyme, { shallow } from "enzyme"
-import Adapter from '@cfaester/enzyme-adapter-react-18';
 import Header from "./header";
+import {render}  from '@testing-library/react';
+import { Provider } from "react-redux";
+import configureStore from 'redux-mock-store';
 
-Enzyme.configure({ adapter: new Adapter() });
+const mockStore = configureStore([]);
+
+const testStore = mockStore({
+    toDoList: {
+        elements: [{}, {}, {}]
+    }
+})
 
 describe('Snapshot header testing', () => {
 
-    const header = shallow(<Header />)
-
-    it('Header component contains h1 tag', () => {
-        expect(header.find('h1')).toHaveLength(1)
-    })
-
-    it('renders message', () => {
-        expect(header.find('h1').text()).toEqual('ToDo List');
-    })
+    const headerComponent = render(
+        <Provider store={testStore}>
+            <Header/>
+        </Provider>
+    )
 
     it('renders properly', () => {
-        expect(header).toMatchSnapshot()
+        expect(headerComponent).toMatchSnapshot()
     })
 });

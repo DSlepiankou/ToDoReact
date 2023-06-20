@@ -1,7 +1,7 @@
 import ToDoCounter from "./todo-counter";
 import configureStore from 'redux-mock-store';
 import { Provider } from "react-redux";
-import { render, screen } from '@testing-library/react';
+import {render, screen}  from '@testing-library/react';
 
 const mockStore = configureStore([]);
 
