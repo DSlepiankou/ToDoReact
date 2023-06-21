@@ -34,7 +34,6 @@ export const toDoListSlice = createSlice({
     },
 
     deleteAllCompleted: (state) => {
-      console.log(state);
       state.elements = state.elements.filter((el) => !el.completed);
       saveElements(state.elements);
     },
