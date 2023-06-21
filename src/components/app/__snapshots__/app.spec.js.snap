@@ -51,6 +51,10 @@ Object {
                 </button>
               </span>
             </li>
+          </ul>
+          <ul
+            class="list-group todo-list"
+          >
             <li
               class="list-group-item"
             >
@@ -73,6 +77,10 @@ Object {
                 </button>
               </span>
             </li>
+          </ul>
+          <ul
+            class="list-group todo-list"
+          >
             <li
               class="list-group-item"
             >
@@ -184,6 +192,10 @@ Object {
               </button>
             </span>
           </li>
+        </ul>
+        <ul
+          class="list-group todo-list"
+        >
           <li
             class="list-group-item"
           >
@@ -206,6 +218,10 @@ Object {
               </button>
             </span>
           </li>
+        </ul>
+        <ul
+          class="list-group todo-list"
+        >
           <li
             class="list-group-item"
           >

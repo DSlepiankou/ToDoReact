@@ -3,6 +3,7 @@ import TodoListItem from "../todo-list-item/todo-list-item";
 import "./items-list.scss"
 import { useSelector, useDispatch } from "react-redux";
 import { deleteElement, checkCompleted } from "../../redux/todo-actions";
+import { v4 } from 'uuid';
 
 
 function ItemsList(){
@@ -47,9 +48,11 @@ function ItemsList(){
     });
 
     return (
-        <ul className="list-group todo-list">
-            {items}
-        </ul>
+        [...items].map((item) => 
+            <ul className="list-group todo-list" key={v4()}>
+                {item}
+            </ul>
+        )
     );
 }
 
