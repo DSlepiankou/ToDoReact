@@ -77,6 +77,5 @@ describe('todo actions tests', () => {
         reducer(initialState, changeFilter('active'))
         const updatedFilter = getFilter();
         expect(updatedFilter).toEqual('active');
-        expect('qwe').toEqual(process.env.FOO)
     })
 })
