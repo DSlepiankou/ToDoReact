@@ -6,7 +6,7 @@ describe('todo application tests', () => {
   });
 
   it('check default placeholder value', () => {
-    cy.get('input[placeholder="Type here what you want todo"]')
+    cy.get('input[placeholder="Type here what you want to do"]')
       .should('exist')
   });
 
@@ -73,7 +73,7 @@ describe('todo application tests', () => {
 
     cy.get('[type="checkbox"]').first().check();
 
-    cy.get('button[role="deletion-button"]').first().click()
+    cy.get('button[class="delete-btn"]').first().click()
     cy.contains('test item2').should('exist');
     cy.contains('test item1').should('not.exist');
   });

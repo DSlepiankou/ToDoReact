@@ -22,8 +22,8 @@ Object {
               test item 1
             </div>
             <button
-              class="float-right delete-btn"
-              role="deletion-button"
+              class="float-right delete-btn trashButton"
+              role="button"
               type="button"
             >
               <i
@@ -51,8 +51,8 @@ Object {
               test item 2
             </div>
             <button
-              class="float-right delete-btn"
-              role="deletion-button"
+              class="float-right delete-btn trashButton"
+              role="button"
               type="button"
             >
               <i
@@ -79,8 +79,8 @@ Object {
               test item 3
             </div>
             <button
-              class="float-right delete-btn"
-              role="deletion-button"
+              class="float-right delete-btn trashButton"
+              role="button"
               type="button"
             >
               <i
@@ -110,8 +110,8 @@ Object {
             test item 1
           </div>
           <button
-            class="float-right delete-btn"
-            role="deletion-button"
+            class="float-right delete-btn trashButton"
+            role="button"
             type="button"
           >
             <i
@@ -139,8 +139,8 @@ Object {
             test item 2
           </div>
           <button
-            class="float-right delete-btn"
-            role="deletion-button"
+            class="float-right delete-btn trashButton"
+            role="button"
             type="button"
           >
             <i
@@ -167,8 +167,8 @@ Object {
             test item 3
           </div>
           <button
-            class="float-right delete-btn"
-            role="deletion-button"
+            class="float-right delete-btn trashButton"
+            role="button"
             type="button"
           >
             <i

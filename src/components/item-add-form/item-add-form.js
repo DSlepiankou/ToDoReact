@@ -27,7 +27,7 @@ function ItemAddForm() {
             onSubmit={onSubmit}>
             <input type="text"
                 className="form-control"
-                placeholder="Type here what you want todo"
+                placeholder="Type here what you want to do"
                 onChange={onInputChange}
                 value={input}>
             </input>

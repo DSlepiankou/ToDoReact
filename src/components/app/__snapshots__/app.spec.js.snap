@@ -21,7 +21,7 @@ Object {
           >
             <input
               class="form-control"
-              placeholder="Type here what you want todo"
+              placeholder="Type here what you want to do"
               type="text"
               value=""
             />
@@ -42,8 +42,8 @@ Object {
                   />
                 </div>
                 <button
-                  class="float-right delete-btn"
-                  role="deletion-button"
+                  class="float-right delete-btn trashButton"
+                  role="button"
                   type="button"
                 >
                   <i
@@ -69,8 +69,8 @@ Object {
                   />
                 </div>
                 <button
-                  class="float-right delete-btn"
-                  role="deletion-button"
+                  class="float-right delete-btn trashButton"
+                  role="button"
                   type="button"
                 >
                   <i
@@ -96,8 +96,8 @@ Object {
                   />
                 </div>
                 <button
-                  class="float-right delete-btn"
-                  role="deletion-button"
+                  class="float-right delete-btn trashButton"
+                  role="button"
                   type="button"
                 >
                   <i
@@ -165,7 +165,7 @@ Object {
         >
           <input
             class="form-control"
-            placeholder="Type here what you want todo"
+            placeholder="Type here what you want to do"
             type="text"
             value=""
           />
@@ -186,8 +186,8 @@ Object {
                 />
               </div>
               <button
-                class="float-right delete-btn"
-                role="deletion-button"
+                class="float-right delete-btn trashButton"
+                role="button"
                 type="button"
               >
                 <i
@@ -213,8 +213,8 @@ Object {
                 />
               </div>
               <button
-                class="float-right delete-btn"
-                role="deletion-button"
+                class="float-right delete-btn trashButton"
+                role="button"
                 type="button"
               >
                 <i
@@ -240,8 +240,8 @@ Object {
                 />
               </div>
               <button
-                class="float-right delete-btn"
-                role="deletion-button"
+                class="float-right delete-btn trashButton"
+                role="button"
                 type="button"
               >
                 <i

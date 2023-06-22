@@ -1,6 +1,6 @@
 import configureStore from 'redux-mock-store';
 import { Provider } from "react-redux";
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import ToDoFilter from './todo-filter';
 
 

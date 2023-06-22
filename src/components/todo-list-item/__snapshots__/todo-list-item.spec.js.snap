@@ -15,8 +15,8 @@ Object {
           />
         </div>
         <button
-          class="float-right delete-btn"
-          role="deletion-button"
+          class="float-right delete-btn trashButton"
+          role="button"
           type="button"
         >
           <i
@@ -37,8 +37,8 @@ Object {
         />
       </div>
       <button
-        class="float-right delete-btn"
-        role="deletion-button"
+        class="float-right delete-btn trashButton"
+        role="button"
         type="button"
       >
         <i

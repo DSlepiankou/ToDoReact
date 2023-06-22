@@ -9,8 +9,7 @@ function TodoListItem(props) {
                 {props.content}
             </div>
             <button type="button"
-                className="float-right delete-btn"
-                role="deletion-button"
+                className="delete-btn"
                 onClick={props.onDeleted}>
                 <i className="bi bi-trash"></i>
             </button>
