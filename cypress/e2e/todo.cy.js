@@ -1,15 +1,96 @@
 
 describe('todo application tests', () => {
-  
+
   beforeEach(() => {
-    cy.visit("")
+    cy.visit("http://localhost:3000/ToDoReact")
+  });
+
+  it('check default placeholder value', () => {
+    cy.get('input[placeholder="Type here what you want todo"]')
+      .should('exist')
   });
 
   it('added new item to input field', () => {
     cy.get('input')
-        .type('qwe')
-        .should('have.value', 'qwe')
+      .type('test input')
+      .should('have.value', 'test input')
   });
+
+  it('should add new item to the todo list', () => {
+    cy.get('input')
+      .type(`$test item{enter}`);
+
+    cy.contains('test item').should('exist')
+  });
+
+  it('correct diplaying count of new active items', () => {
+    cy.get('input')
+      .type(`$test item1{enter}`)
+      .type(`$test item2{enter}`);
+
+    cy.contains('2 more to do').should('exist')
+  });
+
+  it('mark item as done', () => {
+    cy.get('input')
+      .type(`$test item1{enter}`)
+      .type(`$test item2{enter}`);
+
+    cy.contains('2 more to do').should('exist')
+    cy.get('[type="checkbox"]').first().check();
+
+    cy.contains('1 more to do').should('exist')
+  });
+
+  it('change "All" filter to "Active"', () => {
+    cy.get('input')
+      .type(`$test item1{enter}`)
+      .type(`$test item2{enter}`);
+
+    cy.get('[type="checkbox"]').first().check();
+    cy.contains('button', 'Active').click()
+
+    cy.contains('test item2').should('exist');
+    cy.contains('test item1').should('not.exist');
+  });
+
+  it('change "All" filter to "Done"', () => {
+    cy.get('input')
+      .type(`$test item1{enter}`)
+      .type(`$test item2{enter}`);
+
+    cy.get('[type="checkbox"]').first().check();
+    cy.contains('button', 'Done').click()
+
+    cy.contains('test item1').should('exist');
+    cy.contains('test item2').should('not.exist');
+  });
+
+  it('delete item from table', () => {
+    cy.get('input')
+      .type(`$test item1{enter}`)
+      .type(`$test item2{enter}`);
+
+    cy.get('[type="checkbox"]').first().check();
+
+    cy.get('button[role="deletion-button"]').first().click()
+    cy.contains('test item2').should('exist');
+    cy.contains('test item1').should('not.exist');
+  });
+
+  it('delete all completed items from table', () => {
+    cy.get('input')
+      .type(`$test item1{enter}`)
+      .type(`$test item2{enter}`);
+
+    cy.get('[type="checkbox"]').check();
+
+    cy.get('button[class="del-button"]').click()
+    cy.contains('test item2').should('not.exist');
+    cy.contains('test item1').should('not.exist');
+  });
+
+
 
 
 
@@ -117,6 +198,6 @@ describe('todo application tests', () => {
 
   //     // Finally, make sure that the clear button no longer exists.
   //     cy.contains('Clear completed').should('not.exist')
-   // })
+  // })
   //})
 })

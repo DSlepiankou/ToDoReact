@@ -7,7 +7,10 @@ const mockStore = configureStore([]);
 
 const testStore = mockStore({
     toDoList: {
-        elements: [{}, {}, {}]
+        elements: [
+            {content:"test item 1", completed: false, id: 1},
+            {content:"test item 2", completed: false, id: 2},
+            {content:"test item 3", completed: true, id: 3}]
     }
 })
 
@@ -20,7 +23,7 @@ describe('Shapshot counter testing', () => {
 
 
     it('Correct display of the number of todo items', () => {
-        const todosAmount = screen.getByText('3 more to do');
+        const todosAmount = screen.getByText('2 more to do');
 
         expect(todosAmount).toBeInTheDocument()
     })

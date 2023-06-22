@@ -43,6 +43,7 @@ Object {
                 </div>
                 <button
                   class="float-right delete-btn"
+                  role="deletion-button"
                   type="button"
                 >
                   <i
@@ -69,6 +70,7 @@ Object {
                 </div>
                 <button
                   class="float-right delete-btn"
+                  role="deletion-button"
                   type="button"
                 >
                   <i
@@ -95,6 +97,7 @@ Object {
                 </div>
                 <button
                   class="float-right delete-btn"
+                  role="deletion-button"
                   type="button"
                 >
                   <i
@@ -184,6 +187,7 @@ Object {
               </div>
               <button
                 class="float-right delete-btn"
+                role="deletion-button"
                 type="button"
               >
                 <i
@@ -210,6 +214,7 @@ Object {
               </div>
               <button
                 class="float-right delete-btn"
+                role="deletion-button"
                 type="button"
               >
                 <i
@@ -236,6 +241,7 @@ Object {
               </div>
               <button
                 class="float-right delete-btn"
+                role="deletion-button"
                 type="button"
               >
                 <i

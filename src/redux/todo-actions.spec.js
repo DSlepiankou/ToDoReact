@@ -1,6 +1,5 @@
 import { getFilter } from "../repository/repository";
 import reducer, { addElement, changeFilter, checkCompleted, deleteAllCompleted, deleteElement } from "./todo-actions";
-import { store } from './store';
 
 afterEach(() => {
     localStorage.setItem("toDoList", JSON.stringify(null));
@@ -12,6 +11,7 @@ describe('todo actions tests', () => {
         const initialState = {
             elements: []
         }
+
         const item = 'testEl'
         const updatedStore = reducer(initialState, addElement(item))
         const els = JSON.parse(localStorage.getItem("toDoList"));
@@ -32,7 +32,7 @@ describe('todo actions tests', () => {
         const initialState = {
             elements: [{ content: "testItem", completed: false, id: 1 }]
         }
-
+        
         reducer(initialState, checkCompleted(1));
         const updatedItem = JSON.parse(localStorage.getItem("toDoList"));
         expect(updatedItem[0].completed).toEqual(true)

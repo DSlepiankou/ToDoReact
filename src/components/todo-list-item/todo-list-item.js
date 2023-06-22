@@ -10,6 +10,7 @@ function TodoListItem(props) {
             </div>
             <button type="button"
                 className="float-right delete-btn"
+                role="deletion-button"
                 onClick={props.onDeleted}>
                 <i className="bi bi-trash"></i>
             </button>
